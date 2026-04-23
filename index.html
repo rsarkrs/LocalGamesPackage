@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Local Games</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <header class="app-header">
+      <div>
+        <h1 id="game-title">Local Games</h1>
+        <p id="game-status" aria-live="polite">Loading games.</p>
+      </div>
+
+      <div class="game-picker">
+        <label for="game-select">Game</label>
+        <select id="game-select"></select>
+      </div>
+    </header>
+
+    <section id="game-root" class="game-root" aria-label="Selected game"></section>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

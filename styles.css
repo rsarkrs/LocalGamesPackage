@@ -1,0 +1,156 @@
+:root {
+  color-scheme: light;
+  --page: #f4f1ea;
+  --ink: #202124;
+  --muted: #60666f;
+  --panel: #ffffff;
+  --line: #2b3036;
+  --soft-line: #c5c9cf;
+  --accent: #2f5d62;
+  --accent-hover: #24494d;
+  --warn: #b74343;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--page);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button,
+select,
+input {
+  font: inherit;
+}
+
+.app {
+  width: min(100% - 32px, 1080px);
+  margin: 0 auto;
+  padding: 28px 0;
+}
+
+.app-header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: clamp(2.2rem, 7vw, 4.4rem);
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.game-picker {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.game-picker label,
+.game-controls label {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+select,
+button {
+  min-height: 40px;
+  border-radius: 6px;
+}
+
+select {
+  border: 1px solid var(--soft-line);
+  background: #fff;
+  color: var(--ink);
+  padding: 0 34px 0 12px;
+}
+
+button {
+  border: 0;
+  background: var(--accent);
+  color: #fff;
+  padding: 0 14px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--accent-hover);
+}
+
+.game-root {
+  min-height: 560px;
+}
+
+.game-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.placeholder-game {
+  display: grid;
+  place-items: center;
+  min-height: 520px;
+  border: 2px dashed var(--soft-line);
+  background: rgba(255, 255, 255, 0.45);
+  text-align: center;
+  padding: 32px;
+}
+
+.placeholder-game h2 {
+  margin: 0 0 10px;
+  font-size: clamp(2rem, 6vw, 4rem);
+  letter-spacing: 0;
+}
+
+.placeholder-game p {
+  max-width: 520px;
+}
+
+@media (max-width: 720px) {
+  .app {
+    width: min(100% - 20px, 1080px);
+    padding: 20px 0;
+  }
+
+  .app-header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .game-picker,
+  .game-controls {
+    align-items: stretch;
+  }
+
+  .game-picker {
+    flex-direction: column;
+  }
+
+  .game-controls label {
+    width: 100%;
+  }
+
+  select,
+  button {
+    flex: 1 1 145px;
+  }
+}
