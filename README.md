@@ -6,10 +6,11 @@ under `games/`, so game code stays separate and new games can be added without
 rewriting the shell.
 
 Current games:
+Note: games aren't uploaded to the repo for right now.
 
 - Sudoku: playable
-- Solitaire: playable click-to-move Klondike
-- FreeCell: playable click-to-move FreeCell
+- Solitaire: playable
+- FreeCell: playable
 
 ## Requirements
 
@@ -20,28 +21,14 @@ Current games:
 Install dependencies once:
 
 ```powershell
-npm.cmd install
+npm install
 ```
 
 Run the standalone app:
 
 ```powershell
-npm.cmd start
+npm start
 ```
-
-Build a Windows app:
-
-```powershell
-npm.cmd run build
-```
-
-Build a portable Windows app:
-
-```powershell
-npm.cmd run build:portable
-```
-
-Build output is created in the `dist` folder.
 
 ## Game Folder Structure
 
@@ -111,12 +98,12 @@ Solitaire:
 
 - Click the deck to draw cards
 - Click a face-up card or stack to select it
-- Click a tableau pile or foundation to move the selection
+- Click a card pile or foundation to move the selection
 - Double-click a playable card to try sending it to a foundation
 
 FreeCell:
 
 - Click a card or valid descending stack to select it
-- Click an empty free cell, tableau pile, or foundation to move it
+- Click an empty free cell, card pile, or foundation to move it
 - Use Auto Foundations to move currently available foundation cards
 - Stack moves are limited by open free cells and empty columns
